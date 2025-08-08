@@ -1,0 +1,94 @@
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+  :root {
+    /* === Layout === */
+    --breakpoint-mobile: 375px;
+    --breakpoint-desktop: 1440px;
+
+    /* === Neutral Colors === */
+    --neutral-900: hsl(227, 75%, 14%);
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(226, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 99%);
+
+    /* === Red Colors === */
+    --red-400: hsl(3, 86%, 64%);
+    --red-500: hsl(3, 71%, 56%);
+    --red-700: hsl(3, 77%, 44%);
+
+    /* === Gradients === */
+
+    --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    /* === Typography === */
+    --font-family-base: 'Noto Sans', sans-serif;
+    --font-size-body: 16px;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+  }
+
+
+  body {
+    min-height: 100vh;
+    background: var(--gradient-dark);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body.theme-light {
+    --background: var(--gradient-light);
+    --background-header: var(--neutral-700);
+    --text-color: var(--neutral-900);
+    --card-bg: var(--neutral-0);
+    --button-bg: transparent;
+    --button-border: var(--neutral-600);
+    --button-text: var(--neutral-800);
+    --button-hover-bg: var(--red-500);
+    --button-hover-text: var(--neutral-0);
+  }
+
+  body.theme-dark {
+    --background: var(--gradient-dark);
+    --background-header: var(--neutral-700);
+    --text-color: var(--neutral-0);
+    --card-bg: var(--neutral-700);
+    --button-bg: transparent;
+    --button-border: var(--neutral-0);
+    --button-text: var(--neutral-0);
+    --button-hover-bg: var(--red-500);
+    --button-hover-text: var(--neutral-900);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    font-family: "Noto Sans", sans-serif;
+    ;
+  }
+
+
+
+  p,
+  strong,
+  h1,
+  button {
+    font-family: "Noto Sans", sans-serif;
+  }
