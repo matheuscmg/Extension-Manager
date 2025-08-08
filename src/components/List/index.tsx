@@ -22,10 +22,8 @@ export function List({ filter }: FilterProps) {
   async function fetchData() {
     try {
       const response = await api.get("/extensions");
-      console.log(response.data)
 
       if (filter === "all") {
-        console.log("aquiiii")
         setExtensions(response.data);
       }
       else if (filter === "active") {
